@@ -1,0 +1,353 @@
+/*Variables*/
+
+:root {
+    --font-family: "Roboto", sans-serif;
+    --normal-font: 400;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --bg-color: #fcfcfc;
+    --primary-color: #4756df;
+    --secondary-color: #ff7235;
+    --primary-shadow: #8b8eaf;
+    --secondary-shadow: #a17a69;
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
+    --transition: 0.3s;
+  }
+
+html{
+  scroll-behavior: smooth;
+}
+
+  body{
+
+  }
+  
+
+nav{
+
+    max-width: 100%;
+    display: inline;
+    position: fixed;
+    top: 0rem;
+    margin: auto;
+    background-color: rgb(0, 0, 0);
+}
+
+
+
+*{
+
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+
+
+header{
+  position: fixed;
+  width: 100%;
+}
+
+nav{
+    background:  #6441a5;
+    height: 50px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 5px 5px;
+}
+.logo{
+
+    height: 45px;
+}
+nav ul{
+    float: right;
+    margin-right: 60px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+}
+nav ul li a{
+
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background: #bd83ff;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+section{
+   /* background: url(fondo.jpg) no-repeat;*/
+    background-size: cover;
+    background-position: center center;
+
+}
+
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+/* imagen principal*/
+
+.img_prin{
+
+  color: white;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1%;
+  height: 90vh;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  )
+  ,url(img/inicio.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#imagen_principal .img_prin{
+  font-size: 8vw;
+}
+
+#imagen_principal .ahora{
+  color: #6441a5;
+  font-size: 8vw;
+ 
+}
+
+/* footer */
+
+.footer-style {
+  
+  padding-top: 20px;
+  background-color:  #1d1c2b;
+}
+
+footer .copy{
+  color: #969696;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+footer .container {
+  color: rgb(134, 134, 134);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.footer-style h3{
+  font-size: 1.2em;
+}
+
+footer .contact{
+  padding: 0 20px;
+}
+
+
+/*Tarjetas de info*/
+/*Boton con hover*/
+button{
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 5px 20px;
+  border-radius: 6px;
+  border: 0px solid ;
+  color: white;
+  background-color: #6441a5;
+  margin: 15px;
+}
+button:hover{
+  background-color: #bd83ff;
+  transition: .5s;
+}
+/*Boton con hover*/
+#historia{
+  background-color: rgb(30, 30, 30);
+  color: white;
+  text-align: center;
+}
+
+#historia .container{
+ padding: 20px 12px 150px; 
+ text-align: center;
+}
+
+#historia p{
+  display: none;
+}
+
+#historia h2{
+  width: auto;
+  margin-top: 0;
+  font-size: 3.2em;
+   padding: 75px 12px; 
+ text-align: center;
+}
+
+#historia .carta1 .carta2 .carta3{
+
+}
+
+.carta1{
+  width: 100%;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.8)
+  )
+  ,url(img/inicio_proyecto.jpg);
+  background-position: center center;
+  background-size: cover;
+  padding: 50px;
+  margin: 12px;
+  border-radius: 10px;
+}
+
+.carta2{
+  width: 100%;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)
+  )
+  ,url(img/problemas_proyecto.jpg);
+  background-position: center center;
+  background-size: cover;
+  padding: 50px;
+  margin: 12px;
+  border-radius: 10px;
+}
+
+.carta3{
+  width: 100%;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)
+  )
+  ,url(img/final_proyecto.jpg);
+  background-position: center center;
+  background-size: cover;
+  padding: 50px;
+  margin: 12px;
+  border-radius: 10px;
+}
+/*caracteristicas*/
+
+
+#caracteristicas .container{
+  text-align: center;
+  padding: 100px 12px 150px;
+}
+#caracteristicas li{
+  font-size: 1.25em;
+  margin: 15px 0px;
+  font-weight: bold;
+}
+
+#caracteristicas h2{
+  width: auto;
+  margin-top: 0;
+  font-size: 3.2em;
+  padding: 75px 12px; 
+  text-align: center;
+}
+
+
+
+@media (min-width:720px){
+
+
+
+  #caracteristicas h2{
+    width: auto;
+    margin-top: 0;
+    font-size: 4vw;
+    padding: 75px 12px; 
+   text-align: center;
+  }
+
+  #historia .container{
+    display: flex;
+    justify-content: center;
+  }
+
+  #historia p{
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  #historia .carta1, .carta2, .carta3{
+    padding: 40px;
+  }
+
+  #caracteristicas .container{
+    text-align: initial;
+  }
+
+  #caracteristicas ul{
+    text-align: center;
+  }
+}
